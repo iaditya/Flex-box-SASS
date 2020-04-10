@@ -185,11 +185,18 @@
 .overview {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
 
   &__header {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.5rem 3rem;
   }
 
   &__stars {
+    display: flex;
     margin-right: auto;
   }
 
@@ -199,14 +206,73 @@
     width: 1.75rem;
     fill: var(--color-primary);
   }
+  &__icon-location {
+    margin-right: 0.5rem;
+  }
 
   &__location {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
   }
 
   &__rating {
+    background-color: var(--color-primary);
+    align-self: stretch;
+    padding: 0 2.25rem;
+    margin-left: 3rem;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &-average {
+      font-size: 2.25rem;
+      font-weight: 300;
+      margin-bottom: -3px;
     }
-    &-account {
+    &-count {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      
     }
+  }
+}
+
+//BUTTON
+.btn-inline {
+  border: 0;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s;
+  &:hover {
+    color: var(--color-grey-dark-1);
+  }
+  &:focus {
+    animation: pulsate 1s infinite;
+    outline: none;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
   }
 }
