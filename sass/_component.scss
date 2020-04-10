@@ -170,3 +170,43 @@
   padding: 2.5rem;
   color: var(--color-grey-light-4);
 }
+
+//HOTEL VIEW
+
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+.overview {
+  display: flex;
+  align-items: center;
+
+  &__header {
+  }
+
+  &__stars {
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    height: 1.75rem;
+    width: 1.75rem;
+    fill: var(--color-primary);
+  }
+
+  &__location {
+  }
+
+  &__rating {
+    &-average {
+    }
+    &-account {
+    }
+  }
+}
