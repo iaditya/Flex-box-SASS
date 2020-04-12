@@ -18,6 +18,10 @@
   --basic-border : 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em;   //1200px
+$bp-large: 68.5em;   //1100px
+$bp-mid: 56.25em;   //1100px
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +36,10 @@ html {
   box-sizing: border-box;
   // declaring global font size 1rem -> 10px
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
 }
 
 body {

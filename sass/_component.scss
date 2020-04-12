@@ -58,7 +58,6 @@
 
 .user-nav {
   align-self: stretch;
-
   display: flex;
   align-items: center;
 
@@ -113,11 +112,24 @@
   list-style: none;
   margin-top: 5rem;
 
+  @media only screen and (max-width: $bp-mid) {
+    display: flex;
+    margin: 0;
+  }
+
   &__item {
     position: relative;
 
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+      @media only screen and (max-width: $bp-mid) {
+        flex: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: $bp-mid) {
+      flex: 1;
     }
   }
 
@@ -154,6 +166,10 @@
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
+    @media only screen and (max-width: $bp-mid) {
+      justify-content: center;
+      padding: 2rem;
+    }
   }
 
   &__icon {
@@ -169,6 +185,9 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+  @media only screen and (max-width: $bp-mid) {
+    display: none;
+  }
 }
 
 //HOTEL VIEW
@@ -337,6 +356,7 @@
   }
 
   &__friends {
+      display: flex;
   }
 
   &__photo {
@@ -359,6 +379,13 @@
   padding: 3rem;
   position: relative;
   overflow: hidden;
+
+  margin-bottom: 4.5rem;
+
+  @media only screen and (max-width: $bp-mid) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
 
   &::before {
     position: absolute;
@@ -421,6 +448,10 @@
   padding: 3.5rem 0;
   text-align: center;
 
+  @media only screen and (max-width: $bp-mid) {
+    padding: 2.5rem 0;
+  }
+
   &__book-now {
     text-transform: uppercase;
     font-size: 2rem;
@@ -481,7 +512,7 @@
   }
 
   &:focus {
-      outline: none;
-      animation: pulsate 1s infinite;
+    outline: none;
+    animation: pulsate 1s infinite;
   }
 }
